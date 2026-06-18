@@ -1,0 +1,35 @@
+# ============================================================================
+# Python Dependencies
+# ============================================================================
+# Install with: pip install -r requirements.txt
+#
+# VERSION PINNING STRATEGY:
+# We pin major.minor but not patch (e.g., fastapi>=0.110,<1.0) to get
+# security fixes automatically while avoiding breaking changes.
+# For a portfolio project, unpinned versions are also fine.
+# ============================================================================
+
+# Web framework — async, auto-docs, type-safe
+fastapi>=0.110
+# ASGI server — runs the FastAPI app
+uvicorn[standard]>=0.27
+
+# Anthropic SDK — handles API auth, retries, streaming
+anthropic>=0.40
+
+# Supabase client — wraps the REST API and Storage API
+supabase>=2.0
+
+# Settings management — loads .env files, validates config
+pydantic-settings>=2.0
+
+# HTTP client — used internally by supabase-py and anthropic
+httpx>=0.27
+
+# Image processing — used to resize/recompress images before sending to Claude
+# (cuts API cost ~40%, faster uploads, consistent JPEG format downstream).
+Pillow>=10.0
+
+# HEIC/HEIFS support for Pillow — lets us accept iPhone photos directly.
+# iPhones shoot HEIC by default; without this, those users can't upload at all.
+pillow-heif>=0.13
