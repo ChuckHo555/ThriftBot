@@ -117,3 +117,5 @@ thriftbot-expanded/
 └── frontend/
     └── ThriftBot.jsx          ← Updated React component (calls backend)
 ```
+## Analysis Metrics
+https://docs.google.com/spreadsheets/d/1zfi3w3Uch-yQLq5uf4hTj8MTuDX9GIySXU_sWePXQ04/edit?gid=1289992859#gid=1289992859
